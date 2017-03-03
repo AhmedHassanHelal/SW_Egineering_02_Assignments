@@ -1,14 +1,108 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>
-        Welcome to Ajax!
-    </title>
+    <title>Welcome to Ajax!</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
 	<meta charset="utf-8" />
 </head>
 <body>
-    
-    <script src="Scripts/bootstrap.min.js"></script>
+    <div class="row col-md-12">
+        <div id="left_half" class="col-md-6">
+            <div>
+                <p>Choose a back ground color: </p>
+                <select>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>Blue</option>
+                    <option>Yellow</option>
+                    <option>SandyBrown</option>
+                </select>
+            </div>
+            <div>
+                <p>Choose a foreground (text) color: </p>
+                <select>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>Blue</option>
+                    <option>Yellow</option>
+                    <option>SandyBrown</option>
+                </select>
+            </div>
+            <div>
+                <p>Choose a font name: </p>
+                <select>
+                    <option>Arial</option>
+                    <option>'Times New Roman', Times, serif</option>
+                    <option>Bell MT</option>
+                    <option>Calibri</option>
+                    <option>Chiller</option>
+                    <option>Magneto</option>
+                    <option>monospace</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="number">Specify a font size:</label>
+                <input type="number" class="form-control" id="number">
+            </div>
+            <div>
+                <p>Specify a font size: </p>
+                <textarea>
+                </textarea>
+            </div>
+            <div class="row">
+                <p>Choose a border style: </p>
+                <div class="col-md-3">
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">NotSet</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">None</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Dotted</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio" checked>Dashed</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Solid</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Double</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Groove</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Ridge</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Inset</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Outset</label>
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Add the Default Picture</label>
+            </div>
+            <div>
+                <p>Enter the text below: </p>
+                <textarea>Welcome to Ajax!</textarea>
+            </div>
+        </div>
+        <div id="right_half" class="col-md-6" style="border:dashed; height:inherit">
+            <p>Welcome to Ajax!</p>
+        </div>
+    </div>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>
