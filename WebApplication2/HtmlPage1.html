@@ -52,36 +52,36 @@
                 <p>Choose a border style: </p>
                 <div class="col-md-3">
                     <div class="radio">
-                        <label><input type="radio" name="optradio">NotSet</label>
+                        <label><input type="radio" name="optradio" value="notset">NotSet</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">None</label>
+                        <label><input type="radio" name="optradio" value="None">None</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Dotted</label>
+                        <label><input type="radio" name="optradio" value="Dotted">Dotted</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio" checked>Dashed</label>
+                        <label><input type="radio" name="optradio" value="Dashed" checked>Dashed</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Solid</label>
+                        <label><input type="radio" name="optradio" value="Solid">Solid</label>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Double</label>
+                        <label><input type="radio" name="optradio" value="Double">Double</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Groove</label>
+                        <label><input type="radio" name="optradio" value="Groove">Groove</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Ridge</label>
+                        <label><input type="radio" name="optradio" value="Ridge">Ridge</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Inset</label>
+                        <label><input type="radio" name="optradio" value="Inset">Inset</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio">Outset</label>
+                        <label><input type="radio" name="optradio" value="Outset">Outset</label>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                 <textarea>Welcome to Ajax!</textarea>
             </div>
         </div>
-        <div id="right_half" class="col-md-6" style="border:dashed; height:inherit">
+        <div id="right_half" class="col-md-6" style="border-style:dashed; height:initial;">
             <div>
                 <h3 id="screen">Welcome to Ajax!</h3>
             </div>
@@ -118,10 +118,10 @@
             $("h3").css("font-size", $(this).val() + "px");
         }
         function changeBorderStyle() {
-            $("#display").css("border-style", $(this).val());
+            $("#right_half").css("border-style", $(this).val());
         }
         function changeFontStyle() {
-            $("h3").css("font-style",$(this).val());
+            $("h3").css("font-family", $(this).val());
         }
         function toggleImage() {
             $("img").slideToggle();
@@ -130,8 +130,8 @@
             $('textarea').on('keyup', changeText);
             $("#background_color").on('click', changeBackgroundColor);
             $("#text_color").on('click', changeFontColor);
-            $("input[type='number'").on('keyup', changeFontSize);
-            $("input[type='radio']").on('click', changeBorderStyle);
+            $("input[type ='number']").on('keyup', changeFontSize);
+            $("input[type ='radio']").on('click', changeBorderStyle);
             $("#font_style").on('click', changeFontStyle);
             $('input[type="checkbox"]').on('click', toggleImage);
         });
