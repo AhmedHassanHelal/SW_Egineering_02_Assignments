@@ -9,8 +9,8 @@
     <div class="row col-md-12">
         <div id="left_half" class="col-md-6">
             <div>
-                <p>Choose a back ground color: </p>
-                <select>
+                <p>Choose a background color: </p>
+                <select id="background_color">
                     <option>White</option>
                     <option>Black</option>
                     <option>Red</option>
@@ -22,7 +22,7 @@
             </div>
             <div>
                 <p>Choose a foreground (text) color: </p>
-                <select>
+                <select id="text_color">
                     <option>White</option>
                     <option>Black</option>
                     <option>Red</option>
@@ -33,8 +33,8 @@
                 </select>
             </div>
             <div>
-                <p>Choose a font name: </p>
-                <select>
+                <p>Choose a font style: </p>
+                <select id="font_style">
                     <option>Arial</option>
                     <option>'Times New Roman', Times, serif</option>
                     <option>Bell MT</option>
@@ -46,12 +46,7 @@
             </div>
             <div class="form-group">
                 <label for="number">Specify a font size:</label>
-                <input type="number" class="form-control" id="number">
-            </div>
-            <div>
-                <p>Specify a font size: </p>
-                <textarea>
-                </textarea>
+                <input type="number" value="36" class="form-control" id="number">
             </div>
             <div class="row">
                 <p>Choose a border style: </p>
@@ -91,7 +86,7 @@
                 </div>
             </div>
             <div class="checkbox">
-                <label><input type="checkbox" value="">Add the Default Picture</label>
+                <label><input type="checkbox" checked>Add the Default Picture</label>
             </div>
             <div>
                 <p>Enter the text below: </p>
@@ -99,10 +94,47 @@
             </div>
         </div>
         <div id="right_half" class="col-md-6" style="border:dashed; height:inherit">
-            <p>Welcome to Ajax!</p>
+            <div>
+                <h3 id="screen">Welcome to Ajax!</h3>
+            </div>
+            <div>
+                <img src="js_header.jpg">
+            </div>
         </div>
     </div>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+        function changeText() {
+            $("h3").text($(this).val());
+        }
+        function changeBackgroundColor() {
+            $("#right_half").css("background-color", $(this).val());
+        }
+        function changeFontColor() {
+            $("h3").css("color", $(this).val());
+        }
+        function changeFontSize() {
+            $("h3").css("font-size", $(this).val() + "px");
+        }
+        function changeBorderStyle() {
+            $("#display").css("border-style", $(this).val());
+        }
+        function changeFontStyle() {
+            $("h3").css("font-style",$(this).val());
+        }
+        function toggleImage() {
+            $("img").slideToggle();
+        }
+        $(document).ready(function () {
+            $('textarea').on('keyup', changeText);
+            $("#background_color").on('click', changeBackgroundColor);
+            $("#text_color").on('click', changeFontColor);
+            $("input[type='number'").on('keyup', changeFontSize);
+            $("input[type='radio']").on('click', changeBorderStyle);
+            $("#font_style").on('click', changeFontStyle);
+            $('input[type="checkbox"]').on('click', toggleImage);
+        });
+    </script>
 </body>
 </html>
