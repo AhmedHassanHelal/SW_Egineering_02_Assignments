@@ -7,8 +7,8 @@
 </head>
 <body>
     <div class="row col-md-12">
-        <div id="left_half" class="col-md-6">
-            <div>
+        <div id="left_half" class="col-md-6" style="background-color:bisque; height:700px; padding:20px">
+            <div class="background_color">
                 <p>Choose a background color: </p>
                 <select id="background_color">
                     <option>White</option>
@@ -20,11 +20,11 @@
                     <option>SandyBrown</option>
                 </select>
             </div>
-            <div>
+            <div class="text_color">
                 <p>Choose a foreground (text) color: </p>
                 <select id="text_color">
-                    <option>White</option>
                     <option>Black</option>
+                    <option>White</option>
                     <option>Red</option>
                     <option>Green</option>
                     <option>Blue</option>
@@ -32,7 +32,7 @@
                     <option>SandyBrown</option>
                 </select>
             </div>
-            <div>
+            <div class="font_style">
                 <p>Choose a font style: </p>
                 <select id="font_style">
                     <option>Arial</option>
@@ -44,12 +44,12 @@
                     <option>monospace</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="font-size form-group">
                 <label for="number">Specify a font size:</label>
                 <input type="number" value="36" class="form-control" id="number">
             </div>
-            <div class="row">
-                <p>Choose a border style: </p>
+            <div class="border-style row">
+                <p style="margin-left:18px">Choose a border style: </p>
                 <div class="col-md-3">
                     <div class="radio">
                         <label><input type="radio" name="optradio" value="notset">NotSet</label>
@@ -85,15 +85,15 @@
                     </div>
                 </div>
             </div>
-            <div class="checkbox">
+            <div class="image-toggle checkbox">
                 <label><input type="checkbox" checked>Add the Default Picture</label>
             </div>
-            <div>
+            <div class="text-input">
                 <p>Enter the text below: </p>
                 <textarea>Welcome to Ajax!</textarea>
             </div>
         </div>
-        <div id="right_half" class="col-md-6" style="border-style:dashed; height:initial;">
+        <div id="right_half" class="col-md-6" style="border-style:dashed; height:600px; padding:7px">
             <div>
                 <h3 id="screen">Welcome to Ajax!</h3>
             </div>
